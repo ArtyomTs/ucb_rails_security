@@ -382,9 +382,12 @@ module UCB #:nodoc:
           
           _logger.debug("Beginning Authorization")
           return true if case
-            when $1 == "ldap": filter_ldap($2)
-            when $1 == "user": filter_user($2)
-            when $1 == "role": filter_role($2)
+            when $1 == "ldap"
+              filter_ldap($2)
+            when $1 == "user"
+              filter_user($2)
+            when $1 == "role"
+              filter_role($2)
           end
           
           redirect_to(not_authorized_url)
