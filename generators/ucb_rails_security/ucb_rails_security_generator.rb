@@ -163,7 +163,7 @@ class UcbRailsSecurityGenerator < Rails::Generator::Base
     end
     
     def migrations
-      Dir["#{RAILS_ROOT}/db/migrate/*"].map { |f| File.basename(f) }
+      Dir["#{::Rails.root}/db/migrate/*"].map { |f| File.basename(f) }
     end
   
     def write_named_routes_to_route_file

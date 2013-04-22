@@ -14,12 +14,10 @@ require 'ucb_rails_security_casauthentication'
 require 'ucb_rs_controller_methods' 
 require 'ucb_rails_security_logger'
 
-
 module UCB #:nodoc:
   module Rails #:nodoc:
     # = UCB Rails Security
     module Security
-      
       # Returns +true+ if application is using a user table 
       # which must be named +User+.
       def self.using_user_table?
@@ -49,7 +47,7 @@ module UCB #:nodoc:
       end
       
       def self.logger
-        @logger ||= UCB::Rails::Security::Logger.new("#{RAILS_ROOT}/log/ucb_security_#{RAILS_ENV}.log")
+        @logger ||= UCB::Rails::Security::Logger.new("#{::Rails.root}/log/ucb_security_#{::RAILS_ENV}.log")
       end
       
       def self.logger=(val)

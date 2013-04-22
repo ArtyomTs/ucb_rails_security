@@ -83,7 +83,7 @@ module UCB #:nodoc:
         
         # This method exists so it can be stubbed to test cas_base_url()
         def self.environment #:nodoc:
-          RAILS_ENV
+          ::RAILS_ENV
         end
         
         # LDAP Uid for which login is forced successful if in test
